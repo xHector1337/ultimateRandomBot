@@ -1,4 +1,6 @@
 import requests
+import random
+
 valid_languagesWORDS = ["zh", "en", "fr", "es", "it", "de"]
 def randomWord(count=1,lang="en"):
     if lang not in valid_languagesWORDS:
@@ -48,3 +50,53 @@ def randomYoMammaJoke():
 def randomDadJoke():
     req = requests.get("https://icanhazdadjoke.com/",headers={"Accept": "text/plain"})
     return req.text
+def randomActivity():
+    req = requests.get("https://bored-api.appbrewery.com/random")
+    return req.json()["activity"]
+def randomFoxImage():
+    req = requests.get("https://randomfox.ca/floof/")
+    return req.json()["image"]
+def randomDogImage():
+    req = requests.get("https://random.dog/woof.json")
+    return req.json()["url"]
+def randomDuckImage():
+    req = requests.get("https://random-d.uk/api/random")
+    return req.json()["url"]
+def randomCatFact():
+    req = requests.get("https://meowfacts.herokuapp.com/")
+    return req.json()["data"][0]
+def randomDogFact():
+    req = requests.get("https://dog-api.kinduff.com/api/facts")
+    return req.json()["facts"][0]
+def randomCoffeeImage():
+    req = requests.get("https://coffee.alexflipnote.dev/random.json")
+    return req.json()["file"]
+def randomQuote():
+    req = requests.get("https://zenquotes.io/api/random")
+    quote = f"{req.json()[0]['q']} {req.json()[0]['a']}"
+    return quote
+def randomNumber():
+    return random.randint(0,9999999999999999999999999)
+def randomCommitMessage():
+    req = requests.get("https://whatthecommit.com/index.txt")
+    return req.text
+def randomPersonWhoDoesntExist():
+    req = requests.get("https://thispersondoesnotexist.com/")
+    return req.content
+def randomPersonIdentity():
+    req = requests.get("https://randomuser.me/api/")
+    person_data = req.json()["results"][0]
+    person = (
+        f'{person_data["name"]["first"]} {person_data["name"]["last"]}\n'
+        f'Location: {person_data["location"]["country"]}\n'
+        f'Age: {person_data["dob"]["age"]}\n'
+        f'Email: {person_data["email"]}\n'
+        f'Username: {person_data["login"]["username"]}\n'
+        f'Password: {person_data["login"]["password"]}'
+    )
+    return person
+def randomYesOrNo():
+    if random.randint(0,100) > 50:
+        return "yes"
+    else:
+        return "no"    
