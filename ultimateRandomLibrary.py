@@ -131,4 +131,14 @@ def randomRegion():
 def randomImage(width=200,height=300):
     req = requests.get(f"https://picsum.photos/{width}/{height}")
     return req.url
-                        
+def randomColour(type="hex"):
+    req = requests.get("https://x-colors.yurace.pro/api/random")
+    if type == "hex":
+        return req.json()["hex"]
+    elif type == "rgb":
+        return req.json()["rgb"]
+    elif type == "hsl":
+        return req.json()["hsl"]
+    else:
+        print("Available types are hex, rgb and hsl.")
+        return
