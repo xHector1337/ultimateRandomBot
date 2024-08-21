@@ -85,5 +85,29 @@ async def randompersonwhodoesntexist(ctx):
     file.write(r.randomPersonWhoDoesntExist())
     file.close()
     await ctx.send(file=discord.File("randomperson.jpg"))
-    os.remove("randomperson.jpg")                                                                          
+    os.remove("randomperson.jpg")
+@bot.command(description="Get a random identity.",usage="?randomidentity")
+async def randomidentity(ctx):
+    await ctx.send(r.randomPersonIdentity())
+@bot.command(description="Get yes or no.",usage="?yesorno")
+async def yesorno(ctx):
+    await ctx.send(r.randomYesOrNo())
+@bot.command(description="Get a random time in hour.",usage="?randomhour")
+async def randomhour(ctx):
+    await ctx.send(r.randomHour())
+@bot.command(description="Get a random letter from English alphabet.",usage="?randomletter")
+async def randomletter(ctx):
+    await ctx.send(r.randomLetter())
+@bot.command(description="Get a random country.",usage="?randomcountry")
+async def randomcountry(ctx):
+    await ctx.send(r.randomCountry())
+@bot.command(description="Get a random region from seven regions.",usage="?randomregion")
+async def randomregion(ctx):
+    await ctx.send(r.randomRegion())
+@bot.command(description="Get a random image.",usage="?randomimg")
+async def randomimg(ctx):
+    await ctx.send(r.randomImage())
+@bot.command(description="Get a random colour.",usage="?randomcolour")
+async def randomcolour(ctx):
+    await ctx.send(r.randomColour())                                                                                                            
 bot.run(token)            
