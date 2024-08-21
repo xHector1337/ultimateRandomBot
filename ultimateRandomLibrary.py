@@ -99,4 +99,36 @@ def randomYesOrNo():
     if random.randint(0,100) > 50:
         return "yes"
     else:
-        return "no"    
+        return "no"
+def randomHour():
+    hour = random.randint(0,24)
+    minute = random.randint(0,59)
+    if hour > 9 and minute > 9:
+        return f"{hour}:{minute}"
+    elif hour < 10 and minute > 9:
+        return f"0{hour}:{minute}"
+    elif hour < 10 and minute < 10:
+        return f"0{hour}:0{minute}"
+    elif hour > 9 and minute < 10:
+        return f"{hour}:0{minute}"
+    else:
+        return f"{hour}:{minute}"
+def randomLetter():
+    letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    if random.randint(0,100) > 50:
+        return random.choice(letters).upper()
+    else:
+        return random.choice(letters)
+def randomCountry():
+    req = requests.get("https://restcountries.com/v3.1/all")
+    countries = [""]
+    for i in req.json():
+        countries.append(i["name"]["common"])
+    return random.choice(countries)
+def randomRegion():
+    regions = ["Africa","Europe","Asia","Antarctica","North America","South America","Australia"]
+    return random.choice(regions)
+def randomImage(width=200,height=300):
+    req = requests.get(f"https://picsum.photos/{width}/{height}")
+    return req.url
+                        
