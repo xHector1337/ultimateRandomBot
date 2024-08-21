@@ -108,6 +108,6 @@ async def randomregion(ctx):
 async def randomimg(ctx):
     await ctx.send(r.randomImage())
 @bot.command(description="Get a random colour.",usage="?randomcolour")
-async def randomcolour(ctx):
-    await ctx.send(r.randomColour())                                                                                                            
+async def randomcolour(ctx,arg : str = "rgb"):
+    await ctx.send(r.randomColour(arg))                                                                                                            
 bot.run(token)            
