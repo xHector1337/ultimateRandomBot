@@ -59,9 +59,15 @@ def randomFoxImage():
 def randomDogImage():
     req = requests.get("https://random.dog/woof.json")
     return req.json()["url"]
+def randomCatImage():
+    req = requests.get("https://api.thecatapi.com/v1/images/search")
+    return req.json()[0]["url"]
 def randomDuckImage():
     req = requests.get("https://random-d.uk/api/random")
     return req.json()["url"]
+def randomRaccoonImage():
+    req = requests.get("https://api.racc.lol/v1/raccoon?json=true")
+    return req.json()["data"]["url"]
 def randomCatFact():
     req = requests.get("https://meowfacts.herokuapp.com/")
     return req.json()["data"][0]
@@ -141,4 +147,4 @@ def randomColour(type="hex"):
         return req.json()["hsl"]
     else:
         print("Available types are hex, rgb and hsl.")
-        return
+        return    
