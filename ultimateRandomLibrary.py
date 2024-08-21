@@ -146,5 +146,4 @@ def randomColour(type="hex"):
     elif type == "hsl":
         return req.json()["hsl"]
     else:
-        print("Available types are hex, rgb and hsl.")
-        return    
+        return "Available types are hex, rgb and hsl."
