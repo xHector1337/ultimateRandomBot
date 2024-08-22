@@ -109,10 +109,10 @@ async def randomcountry(ctx):
 @bot.command(description="Get a random region from seven regions.",usage="?randomregion")
 async def randomregion(ctx):
     await ctx.send(r.randomRegion())
-@bot.command(description="Get a random image.",usage="?randomimg")
-async def randomimg(ctx):
-    await ctx.send(r.randomImage())
-@bot.command(description="Get a random colour.",usage="?randomcolour")
+@bot.command(description="Get a random image.",usage="?randomimg <(optional) width> <(optional) height>")
+async def randomimg(ctx,width : int = 200, height : int = 300):
+    await ctx.send(r.randomImage(width,height))
+@bot.command(description="Get a random colour.",usage="?randomcolour <(optional) type>")
 async def randomcolour(ctx,arg : str = "rgb"):
     await ctx.send(r.randomColour(arg))                                                                                                            
 bot.run(token)            
