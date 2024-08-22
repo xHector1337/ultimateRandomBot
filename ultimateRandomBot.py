@@ -9,7 +9,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 token = ""
 with open("settings.json","r") as f:
-    data = json.load()
+    data = json.load(f)
     token = data["token"]
     f.close()
 bot = commands.Bot(command_prefix="?",intents=intents)
