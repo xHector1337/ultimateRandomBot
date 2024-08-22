@@ -4,35 +4,31 @@ import random
 valid_languagesWORDS = ["zh", "en", "fr", "es", "it", "de"]
 def randomWord(count=1,lang="en"):
     if lang not in valid_languagesWORDS:
-        print("Available languages are zh,en,fr,es,it and de.")
-        return
+        return "Available languages are zh,en,fr,es,it and de."
     req = ""
     if count == 1:
         req = requests.get(f"https://random-word-api.herokuapp.com/word?lang={lang}")
     elif count > 1:
         req = requests.get(f"https://random-word-api.herokuapp.com/word?lang={lang}&number={count}")
     else:
-        print("randomWord function error occured.")    
+        return "randomWord function error occured."    
     return req.text.replace('"',"").replace("[","").replace("]","").replace(","," ")
 def randomWordAll(lang="en"):
     if lang not in valid_languagesWORDS:
-        print("Avaliable languages are:\n",valid_languagesWORDS)
-        return
+        return f"Avaliable languages are:\n{valid_languagesWORDS}"
     print("This might take some time...")
     req = requests.get(f"https://random-word-api.herokuapp.com/all?lang={lang}")
     return req.text.replace('"',"").replace("[","").replace("]","").replace(","," ")
 valid_languagesJokes = ["en","cs","de","es","fr","pt"]
 def randomJoke(lang="en"):
     if lang not in valid_languagesJokes:
-        print("Available languages are:\n",valid_languagesJokes)
-        return
+        return f"Available languages are:\n{valid_languagesJokes}"
     req = requests.get(f"https://v2.jokeapi.dev/joke/Any?lang={lang}&format=txt")
     return req.text
 valid_languagesFacts = ["en","de"]
 def randomFunFact(lang="en"):
     if lang not in valid_languagesFacts:
-        print("Available languages are:\n",valid_languagesFacts)
-        return
+        return f"Available languages are:\n{valid_languagesFacts}"
     req = requests.get(f"https://uselessfacts.jsph.pl/api/v2/facts/random?language={lang}")
     return req.json()["text"]
 def randomTechyQuote():
@@ -146,4 +142,4 @@ def randomColour(type="hex"):
     elif type == "hsl":
         return req.json()["hsl"]
     else:
-        return "Available types are hex, rgb and hsl."
+        return "Available types are hex, rgb and hsl."      
