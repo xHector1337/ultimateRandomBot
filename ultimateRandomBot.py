@@ -3,10 +3,15 @@ from discord.ext import commands
 import ultimateRandomLibrary as r
 import random
 import os
+import json
 
 intents = discord.Intents.default()
 intents.message_content = True
 token = ""
+with open("settings.json","r") as f:
+    data = json.load()
+    token = data["token"]
+    f.close()
 bot = commands.Bot(command_prefix="?",intents=intents)
 
 @bot.event
