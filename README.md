@@ -51,4 +51,68 @@ Default prefix is **?**.
 
 + ?randomcoffeeimg --> Uses `https://coffee.alexflipnote.dev/random.json` API to get a random coffee image.
 
-+ ?randomquote --> Uses `https://zenquotes.io/api/random` API to get a random quote.   
++ ?randomquote --> Uses `https://zenquotes.io/api/random` API to get a random quote.
+
++ ?randomnumber --> Returns a random number.
+
++ ?randomcommitmessage --> Uses `https://whatthecommit.com/index.txt` API to get a random Git commit message.
+
++ ?randompersonwhodoesntexist --> Uses `https://thispersondoesnotexist.com/` API to get a photo of a random person who doesn't exist.
+
++ ?randomidentity --> Uses `https://randomuser.me/api/` API to get a random identity.
+
++ ?yesorno --> Returns yes or no randomly.
+
++ ?randomhour --> Returns randomly generated time in hour. (11:44 as example)
+
++ ?randomletter --> Returns a random letter from English alphabet.
+
++ ?randomcountry --> Uses `https://restcountries.com/v3.1/all` API to return a random country.
+
++ ?randomregion --> Returns a random region from the seven regions.
+
++ ?randomimg <(optional) width> <(optional) height> --> Uses `https://picsum.photos/` API to get a random image. If don't pass any arguments, it gets a random image of 200x300.               
+
++ ?randomcolour <(optional type> --> Uses `https://x-colors.yurace.pro/api/random` API to get a random image. If you don't pass any type as argument, it returns the colour in rgb.
+
+# Ultimate Random Library
+
+## Installation
+
+After cloning or downloading the repository, you can start using the library by downloading dependencies.
+If you are not going to use the Discord bot you don't need to download `discord.py` dependency. Only `requests` is enough.
+
+## List of Functions
+
++ randomWord(count=1,lang="en") --> If language is available in languages list. It returns random words in the language you passed as much as the count argument.
+  Available languages are "zh", "en", "fr", "es", "it", "de". It uses `https://random-word-api.herokuapp.com/word` API.
+
++ randomWordAll(lang="en") --> If language is available in the languages list, returns all of the words in `https://random-word-api.herokuapp.com/word` API database.
+ Available languages are "zh", "en", "fr", "es", "it", "de".
+
++ randomJoke(lang="en) --> If language is available in languages list, returns a joke from `https://v2.jokeapi.dev/joke/Any` API. Available languages are "en","cs","de","es","fr","pt".
+
++ randomFunFact(lang="en") --> If language is available in languages list, returns a random fun fact from `https://uselessfacts.jsph.pl/api/v2/facts/random` API. Available languages are "en","de".
+
++ randomTechyQuote() --> Returns a random techy quote from `https://techy-api.vercel.app/api/text` API.
+
++ randomChuckNorrisJoke() --> Returns a random Chuck Norris Joke from `https://api.chucknorris.io/jokes/random` API.
+
++ randomExcuse() --> Returns a random excuse from `https://excuser-three.vercel.app/v1/excuse` API.
+
++ randomYoMammaJoke() --> Returns a random Yo Mamma joke from `https://www.yomama-jokes.com/api/v1/jokes/random/` API.
+
++ randomDadJoke() --> Returns a random dad joke from `https://icanhazdadjoke.com/` API.
+
++ randomActivity() --> Returns a random activity from `https://bored-api.appbrewery.com/random` API.
+
++ randomFoxImage() --> Returns a random fox image url from `https://randomfox.ca/floof/` API.
+
++ randomDogImage() --> Returns a random dog image url from `https://random.dog/woof.json` API.
+
++ randomCatImage() --> Returns a random cat image url from `https://api.thecatapi.com/v1/images/search` API.
+
++ randomDuckImage() --> Returns a random duck image url from `https://random-d.uk/api/random` API.
+
++ randomRaccoonImage() --> Returns a random raccoon image url from `https://api.racc.lol/v1/raccoon` API.
+               
