@@ -73,7 +73,7 @@ Default prefix is **?**.
 
 + ?randomimg <(optional) width> <(optional) height> --> Uses `https://picsum.photos/` API to get a random image. If don't pass any arguments, it gets a random image of 200x300.               
 
-+ ?randomcolour <(optional type> --> Uses `https://x-colors.yurace.pro/api/random` API to get a random image. If you don't pass any type as argument, it returns the colour in rgb.
++ ?randomcolour <(optional type> --> Uses `https://x-colors.yurace.pro/api/random` API to get a random image. If you don't pass any type as argument, it returns the colour in hex.
 
 # Ultimate Random Library
 
@@ -116,3 +116,38 @@ If you are not going to use the Discord bot you don't need to download `discord.
 
 + randomRaccoonImage() --> Returns a random raccoon image url from `https://api.racc.lol/v1/raccoon` API.
                
++ randomCatFact() --> Returns a random fact about cats from `https://meowfacts.herokuapp.com/` API.
+
++ randomDogFact() --> Returns a random fact about dogs from `https://dog-api.kinduff.com/api/facts` API.
+
++ randomCoffeeImage() --> Returns a random coffee image url from `ttps://coffee.alexflipnote.dev/random.json` API.
+
++ randomQuote() --> Returns a random quote from `https://zenquotes.io/api/random` API.
+
++ randomNumber() --> Returns a number between 0 and 9999999999999999999999999.
+
++ randomCommitMessage() --> Returns a random Git commit message from `https://whatthecommit.com/index.txt` API.
+
++ randomPersonWhoDoesntExist --> Returns a random person's image who doesn't exist in bytes from `https://thispersondoesnotexist.com/` API.
+
++ randomPersonIdentity --> Returns a random person identity from `https://randomuser.me/api/` API. It includes a random name and surname, random location, age, email, username and password. Of course all of these are randomly generated.
+
++ randomYesOrNo() --> Returns yes or no.
+
++ randomHour() --> It returns a randomly generated time in hour. (Example: 05:44)
+
++ randomLetter() --> Returns a random letter from English alphabet.
+
++ randomCountry() --> Returns a random country from `https://restcountries.com/v3.1/all` API.
+
++ randomRegion() --> Returns a random region from the seveb regions.
+
++ randomImage(width=200,height=300) --> Returns a random image url according to weidth and height you pass as arguments. It uses `https://picsum.photos/` API.
+
++ randomColour(type="hex") --> Returns a random colour in the type you pass as argument. It uses `https://x-colors.yurace.pro/api/random` API.
+  Available types are "hex","rgb","hsl".
+
+# Last Words
+
+All API credits go to their dear owners. I do not own any of them. If you find any bugs or mistakes in my project, please feel free to contact me.
+Happy coding!
