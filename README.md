@@ -1,3 +1,5 @@
+![Ekran görüntüsü 2024-09-07 170424](https://github.com/user-attachments/assets/fe6967d7-0594-432a-859f-4c08fc6baf03)
+
 Ultimate Random Bot is a randomizer discord bot that has its own library. It uses a couple of APIs to fetch random data such as random cat and dog images, fun facts etc.
 
 # Discord Bot
